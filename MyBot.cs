@@ -35,7 +35,7 @@ namespace DownloadBot
 
             discord.ExecuteAndWait(async () =>
             {
-                await discord.Connect("MjM5NDY3NDM2ODYzMjU4NjQ1.Cu6VEA.7Bek5nyQR8LtuiALO0Bbsw8WkqE", TokenType.Bot);
+                await discord.Connect("", TokenType.Bot);
             });
         }
 
