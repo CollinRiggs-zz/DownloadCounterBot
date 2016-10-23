@@ -35,7 +35,7 @@ namespace DownloadBot
 
             discord.ExecuteAndWait(async () =>
             {
-                await discord.Connect("TOKEN", TokenType.Bot);
+                await discord.Connect("MjM5NDY3NDM2ODYzMjU4NjQ1.Cu6VEA.7Bek5nyQR8LtuiALO0Bbsw8WkqE", TokenType.Bot);
             });
         }
 
@@ -43,9 +43,11 @@ namespace DownloadBot
         {
             commands.CreateCommand("downloads").Do(async (e) =>
             {
-                if (e.Channel.Name == "general")
+                //await e.Channel.SendMessage(e.Channel.Name);
+                if (e.Channel.Name == "tesla_essentials")
                 {
                     await e.Channel.Edit(null, "Downloads: " + getDownloads());
+                    await e.Channel.SendMessage("Downloads: " + getDownloads());
                 }
             });
         }
