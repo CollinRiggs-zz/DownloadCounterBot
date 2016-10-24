@@ -56,10 +56,9 @@ namespace DownloadBot
         private Boolean updated = false;
         private void timerTick()
         {
-            
 
             int minute = DateTime.Now.Minute;
-            if (minute == 0)
+            if (minute == 0 && DateTime.Now.Second == 0)
             {
                 if (!updated)
                 {
